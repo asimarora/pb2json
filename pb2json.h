@@ -7,3 +7,5 @@ char *pb2json(const Message &msg);
 char *pb2json(Message *msg,const char *buf,int len);
 static json_t *parse_msg(const Message *msg);
 static json_t *parse_repeated_field(const Message *msg,const Reflection * ref,const FieldDescriptor *field);
+
+int json2pb(Message *msg, const char *buf, size_t size);
